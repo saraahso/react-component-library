@@ -1,0 +1,46 @@
+.btn{
+  text-align: center;
+  vertical-align: middle;
+  transition: all 0.25s ease;
+
+  //Types: round, square...
+    &.round{
+      border-radius: 25px;
+      border:none;
+    }
+    &.square{
+      border:none;
+    }
+
+    //Background-colors: blue, orange, purple...
+    &.blue{
+      background-color:dodgerblue;
+      color: white;
+
+      &:hover{
+        background-color:rgb(98, 135, 172);
+      }
+    }
+    &.orange{
+      background-color:orange;
+      color: black;
+
+      &:hover{
+        background-color:rgb(235, 186, 96);
+      }
+    }
+
+    //Size: small, big...
+    &.small{
+      height:30px;
+      padding:5px 15px;
+      font-size: 14px;
+    }
+
+    &.big{
+      height:50px;
+      padding:5px 25px;
+      font-size: 18px;
+    }
+    
+}
