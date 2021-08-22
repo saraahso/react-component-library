@@ -1,7 +1,6 @@
-import { Meta } from '@storybook/addon-docs/blocks'
+import { Meta, ColorPalette, ColorItem } from "@storybook/addon-docs";
 
-
-<Meta title="Components/Components Introduction" />
+<Meta title="React Component Library Storybook" />
 
 <style>{`
     .sbdocs-content {
@@ -9,4 +8,25 @@ import { Meta } from '@storybook/addon-docs/blocks'
     }
  `}</style>
 
-<h2>Welcome to Marketing Tech Team Storybook</h2>
+# React Component Library Storybook
+
+_Define here your library intro page_
+
+## Table of Components
+
+| Component | Code                                                                               | Documentation |
+| --------- | ---------------------------------------------------------------------------------- | ------------- |
+| Button    | ✅Complete ([View Component](/?path=/docs/components-buttons-button--default-btn)) | ✅Done        |
+
+## Colors
+
+### ColorPalette of the project
+
+<ColorPalette>
+  <ColorItem title="Primary" subtitle="Green" colors={["#56776c", "#464f41"]} />
+  <ColorItem
+    title="Secondary"
+    subtitle="Orange"
+    colors={["#eeb76b", "#e2703a"]}
+  />
+</ColorPalette>

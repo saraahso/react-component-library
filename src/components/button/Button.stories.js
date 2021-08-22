@@ -1,9 +1,12 @@
 import React from 'react';
-import  Button  from './Button';
+import Button from './Button';
 
 export default {
   title: 'Components/Buttons/Button',
   component: Button,
+  parameters: {
+    componentSubtitle: 'Displays default buttons',
+  },
   argTypes: {
     children: {
       description: 'Button text',
@@ -16,7 +19,7 @@ export default {
       control: {
         type: 'select',
         required: true,
-        options: ['blue', 'orange'],
+        options: ['green', 'orange'],
       },
     },
     type: {
@@ -30,7 +33,7 @@ export default {
       control: {
         type: 'select',
         required: true,
-        options: ['bug', 'small'],
+        options: ['big', 'small'],
       },
     },
   },
@@ -38,18 +41,68 @@ export default {
 
 const Template = (args) => <Button {...args} />;
 
-export const Blue = Template.bind({});
-Blue.args = {
+export const DefaultBtn = Template.bind({});
+DefaultBtn.args = {
   children: 'Small Btn',
-  backgroundColor: 'blue',
+  backgroundColor: 'green',
   type: 'round',
   size: 'small'
 };
 
-export const Orange = Template.bind({});
-Orange.args = {
-  children: 'Big Btn',
-  backgroundColor: 'orange',
-  type: 'square',
-  size: 'big'
+export const Colors = (args) => (
+  <div>
+    <Button {...args} backgroundColor="green" />
+    <Button {...args} backgroundColor="orange" />
+  </div>
+);
+
+Colors.args = {
+  children: 'Color btn',
+  type: 'round',
+  size: 'small'
 };
+
+Colors.parameters = {
+  docs: {
+    storyDescription: '2 sizes are supported.',
+  },
+};
+
+export const Sizes = (args) => (
+  <div>
+    <Button {...args} size="big" />
+    <Button {...args} size="small" />
+  </div>
+);
+
+Sizes.args = {
+  children: 'Size btn',
+  backgroundColor: 'green',
+  type: 'square',
+};
+
+Sizes.parameters = {
+  docs: {
+    storyDescription: '2 sizes are supported.',
+  },
+};
+
+export const Types = (args) => (
+  <div>
+    <Button {...args} type="round" />
+    <Button {...args} type="square" />
+  </div>
+);
+
+Types.args = {
+  children: 'Type btn',
+  backgroundColor: 'orange',
+  size: 'big',
+};
+
+Types.parameters = {
+  docs: {
+    storyDescription: '2 types are supported.',
+  },
+};
+
