@@ -1,46 +1,49 @@
-.btn{
+.btn {
+  margin: 5px;
   text-align: center;
   vertical-align: middle;
   transition: all 0.25s ease;
 
   //Types: round, square...
-    &.round{
-      border-radius: 25px;
-      border:none;
-    }
-    &.square{
-      border:none;
-    }
+  &.round {
+    border-radius: 50px;
+    border: none;
+  }
+  &.square {
+    border: none;
+    border-radius: 2px;
+  }
 
-    //Background-colors: blue, orange, purple...
-    &.blue{
-      background-color:dodgerblue;
-      color: white;
+  //Background-colors: blue, orange, purple...
+  &.green {
+    background-color: #56776c;
+    color: white;
 
-      &:hover{
-        background-color:rgb(98, 135, 172);
-      }
+    &:hover {
+      background-color: #464f41;
     }
-    &.orange{
-      background-color:orange;
-      color: black;
+  }
+  &.orange {
+    background-color: #eeb76b;
+    color: black;
 
-      &:hover{
-        background-color:rgb(235, 186, 96);
-      }
+    &:hover {
+      background-color: #e2703a;
     }
+  }
 
-    //Size: small, big...
-    &.small{
-      height:30px;
-      padding:5px 15px;
-      font-size: 14px;
-    }
+  //Size: small, big...
+  &.small {
+    height: 40px;
 
-    &.big{
-      height:50px;
-      padding:5px 25px;
-      font-size: 18px;
-    }
-    
+    padding: 5px 15px;
+    font-size: 14px;
+  }
+
+  &.big {
+    height: 70px;
+    width: 140px;
+    padding: 5px 25px;
+    font-size: 18px;
+  }
 }
