@@ -32,13 +32,6 @@ Visualize library with Storybook
 npm run storybook
 ```
 
-Visualize library with Playground
-
-```bash
-npm run start-playground
-```
-
-
 ## Author
 
 **Sara Santana Sparrer**
