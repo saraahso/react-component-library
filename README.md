@@ -1,12 +1,12 @@
-# React Reusable Components Library Boilerplate
+# :fire: React Reusable Components Library Boilerplate :fire:
 
 Useful reusable components library built with create-react-app with Storybook, SCSS and Jest.
 
-| Built with | 
-|---|
-| Storybook  | 
-| SASS |   
-| Jest |
+|  Built with | Documentation | 
+|---|---| 
+| Storybook |  https://storybook.js.org/ | 
+| SASS |   https://sass-lang.com/ |   
+| Jest |   https://jestjs.io/|
 
 
 ## Installation
@@ -30,6 +30,13 @@ Visualize library with Storybook
 ```bash
 npm run storybook
 ```
+
+Visualize library with Playground
+
+```bash
+npm run start-playground
+```
+
 
 ## Author
 
