@@ -1,23 +1,34 @@
-import babel from '@rollup/plugin-babel';
-import external from 'rollup-plugin-peer-deps-external';
-import del from 'rollup-plugin-delete';
-import pkg from './package.json';
-import scss from 'rollup-plugin-scss';
+import resolve from "@rollup/plugin-node-resolve";
+import commonjs from "@rollup/plugin-commonjs";
+import dts from "rollup-plugin-dts";
+import sass from 'rollup-plugin-sass';
 
-export default {
-    input: pkg.source,
+const packageJson = require("./package.json");
+
+export default [
+  {
+    input: "src/index.ts",
     output: [
-        { file: pkg.main, format: 'cjs' },
-        { file: pkg.module, format: 'esm' }
+      {
+        file: packageJson.main,
+        format: "cjs",
+        sourcemap: true,
+      },
+      {
+        file: packageJson.module,
+        format: "esm",
+        sourcemap: true,
+      },
     ],
     plugins: [
-        scss(),
-        external(),
-        babel({
-            exclude: 'node_modules/**',
-            babelHelpers: 'bundled'
-        }),
-        del({ targets: ['dist/*'] }),
+      resolve(),
+      commonjs(),
+      sass()
     ],
-    external: Object.keys(pkg.peerDependencies || {}),
-};
+  },
+  {
+    input: "dist/esm/types/index.d.js",
+    output: [{ file: "dist/index.d.js", format: "esm" }],
+    plugins: [dts()],
+  },
+];

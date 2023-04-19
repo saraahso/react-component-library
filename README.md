@@ -1,14 +1,14 @@
 # :fire: React Reusable Components Library Boilerplate :fire:
 
-Useful reusable components library built with create-react-app with Storybook, SCSS and Jest.
+Useful reusable components library built with create-react-app using JS, Rollup, Storybook, SCSS, React Testing Library and Jest.
+
 ## [LIVE DEMO](https://react-component-library-ki5ay.ondigitalocean.app/?path=/story/react-component-library-storybook--page)
 
-|  Built with | Documentation | 
-|---|---| 
-| Storybook |  https://storybook.js.org/ | 
-| SASS |   https://sass-lang.com/ |   
-| Jest |   https://jestjs.io/|
-
+| Built with | Documentation             |
+| ---------- | ------------------------- |
+| Storybook  | https://storybook.js.org/ |
+| SASS       | https://sass-lang.com/    |
+| Jest       | https://jestjs.io/        |
 
 ## Installation
 
@@ -41,9 +41,11 @@ npm run storybook
 [![forthebadge](https://forthebadge.com/images/badges/powered-by-coffee.svg)](https://forthebadge.com) [![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
 
 ## Contributing
+
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
 Give a ⭐️ if you like this project!
 
 ## License
+
 [MIT](https://choosealicense.com/licenses/mit/)
