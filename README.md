@@ -2,7 +2,7 @@
 
 Useful reusable components library built with create-react-app using JS, Rollup, Storybook, SCSS, React Testing Library and Jest.
 
-## [LIVE DEMO](https://react-component-library-ki5ay.ondigitalocean.app/?path=/story/react-component-library-storybook--page)
+## [LIVE DEMO](https://react-component-library-phi.vercel.app/)
 
 | Built with | Documentation             |
 | ---------- | ------------------------- |
