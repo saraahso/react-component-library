@@ -1,10 +1,14 @@
-import { addDecorator } from '@storybook/react'
-import { withConsole } from '@storybook/addon-console'
+/** @type { import('@storybook/react').Preview } */
+const preview = {
+  parameters: {
+    actions: { argTypesRegex: "^on[A-Z].*" },
+    controls: {
+      matchers: {
+        color: /(background|color)$/i,
+        date: /Date$/,
+      },
+    },
+  },
+};
 
-addDecorator((storyFn, context) => withConsole()(storyFn)(context));
-
-export const parameters = {
-  layout: 'fullscreen',
-  controls: { expanded: true },
-  actions: { argTypesRegex: "^on[A-Z].*" },
-}
+export default preview;
