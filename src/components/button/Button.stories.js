@@ -43,7 +43,7 @@ const Template = (args) => <Button {...args} />;
 
 export const DefaultBtn = Template.bind({});
 DefaultBtn.args = {
-  children: 'Small Btn',
+  children: 'Default Btn',
   backgroundColor: 'green',
   type: 'round',
   size: 'small'
@@ -64,7 +64,7 @@ Colors.args = {
 
 Colors.parameters = {
   docs: {
-    storyDescription: '2 sizes are supported.',
+    storyDescription: 'Supports two colors.',
   },
 };
 
@@ -83,7 +83,7 @@ Sizes.args = {
 
 Sizes.parameters = {
   docs: {
-    storyDescription: '2 sizes are supported.',
+    storyDescription: 'Supports two sizes.',
   },
 };
 
@@ -102,7 +102,6 @@ Types.args = {
 
 Types.parameters = {
   docs: {
-    storyDescription: '2 types are supported.',
+    storyDescription: 'Supports two types.',
   },
 };
-

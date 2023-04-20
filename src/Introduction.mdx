@@ -1,0 +1,53 @@
+import { Meta, ColorPalette, ColorItem } from "@storybook/blocks";
+
+<Meta title="React Component Library Storybook" />
+
+<style>
+	{`
+    .sbdocs-content {
+        max-width: 100%;
+    }
+  `}
+</style>
+
+# React Component Library Storybook
+
+Storybook helps you build UI components in isolation from your app's business logic, data, and context.
+That makes it easy to develop hard-to-reach states. Save these UI states as **stories** to revisit during development, testing, or QA.
+
+_Define here your library intro page_
+
+<div className="subheading">Table of Components</div>
+
+<div className="table-wrapper">
+	<table>
+		<thead>
+			<tr>
+				<th>Component</th>
+				<th>Code</th>
+				<th>Documentation</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>Button</td>
+				<td>
+					✅Complete ([View
+					Component](/?path=/docs/components-buttons-button--default-btn))
+				</td>
+				<td>✅Done</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+<div className="subheading">Branding Colors</div>
+
+<ColorPalette>
+	<ColorItem title="Primary" subtitle="Green" colors={["#56776c", "#464f41"]} />
+	<ColorItem
+		title="Secondary"
+		subtitle="Orange"
+		colors={["#eeb76b", "#e2703a"]}
+	/>
+</ColorPalette>

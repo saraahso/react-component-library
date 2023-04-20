@@ -1,6 +1,14 @@
-
-export const parameters = {
-  layout: 'fullscreen',
-  controls: { expanded: true },
-  actions: { argTypesRegex: "^on[A-Z].*" },
+/** @type { import('@storybook/react').Preview } */
+const preview = {
+  parameters: {
+    actions: { argTypesRegex: "^on[A-Z].*" },
+    controls: {
+      matchers: {
+        color: /(background|color)$/i,
+        date: /Date$/,
+      },
+    },
+  },
 };
+
+export default preview;

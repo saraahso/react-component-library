@@ -1,33 +1,26 @@
-const path = require("path");
-module.exports = {
-  stories: [ "../src/components/*.stories.mdx",
-    "../src/components/**/*.stories.@(js|jsx|ts|tsx)"],
-  // Add any Storybook addons you want here: https://storybook.js.org/addons/
-  addons: ["@storybook/addon-mdx-gfm"],
-  webpackFinal: async config => {
-    config.module.rules.push({
-      test: /\.scss$/,
-      use: ["style-loader", "css-loader", "sass-loader"],
-      include: path.resolve(__dirname, "../")
-    });
-    config.module.rules.push({
-      test: /\.(ts|tsx)$/,
-      loader: require.resolve("babel-loader"),
+/** @type { import('@storybook/react-webpack5').StorybookConfig } */
+const config = {
+  stories: ["../src/**/*.mdx", "../src/**/*.stories.@(js|jsx|ts|tsx)"],
+  addons: [
+    "@storybook/addon-links",
+    "@storybook/addon-essentials",
+    "@storybook/addon-interactions",
+    {
+      name: '@storybook/addon-styling',
       options: {
-        presets: [["react-app", {
-          flow: false,
-          typescript: true
-        }]]
-      }
-    });
-    config.resolve.extensions.push(".ts", ".tsx");
-    return config;
-  },
+        sass: {
+          // Require your Sass preprocessor here
+          implementation: require('sass'),
+        },
+      },
+    },
+  ],
   framework: {
     name: "@storybook/react-webpack5",
-    options: {}
+    options: {},
   },
   docs: {
-    autodocs: true
-  }
+    autodocs: "tag",
+  },
 };
+export default config;
