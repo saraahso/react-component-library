@@ -2,14 +2,14 @@ import React from 'react';
 import Button from './Button';
 
 export default {
-  title: 'Components/Buttons/Button',
+  title: 'Components/Buttons/TextParallax',
   component: Button,
   parameters: {
     componentSubtitle: 'Displays default buttons',
   },
   argTypes: {
     children: {
-      description: 'Button text',
+      description: 'TextParallax text',
       type: { name: 'string', required: true },
       control: {
         type: 'text',

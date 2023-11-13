@@ -1,0 +1,37 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:900");
+
+.txtparallax{
+  width: 100vw;
+  height: 100vh;
+  background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__txt{
+    text-align: center;
+    font-size: 10rem;
+    letter-spacing: 1vw;
+    margin: auto;
+    font-weight: bold;
+    color:white;
+    background-color: #FBDA61;
+    background-image: linear-gradient(45deg, #FBDA61 0%, #FF5ACD 100%);
+    font-family: "Montserrat", sans-serif;
+    background-size: auto 200%;
+    background-clip: text;
+    text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: move 5s linear infinite;
+  }
+}
+
+@keyframes move {
+  from {
+    background-size: 10%;
+  }
+  to {
+    background-size: 100%;
+  }
+}
